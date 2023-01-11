@@ -88,7 +88,7 @@ function getdata(){
         posts_div.innerHTML=
         "<div class='au-post-card'>"+
           "<div class='post-img-holder'>"+
-              "<embed class='post-img image' src='"+value.imageURL+"'autoplay>"+
+              "<embed class='post-img image' src='"+value.imageURL+"y>"+
           "</div>"+
           "<a class='post-download' href='"+value.imageURL+"' download='ind-shubham@uagalaxy'><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 512 512'><path d='M336,176h40a40,40,0,0,1,40,40V424a40,40,0,0,1-40,40H136a40,40,0,0,1-40-40V216a40,40,0,0,1,40-40h40' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><polyline points='176 272 256 352 336 272' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><line x1='256' y1='48' x2='256' y2='336' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/></svg></a>"+
           "<div class='post-about'>"+
@@ -143,9 +143,9 @@ window.addEventListener('scroll', videoScroll);
 
 function videoScroll() {
 
-  if ( document.querySelectorAll('video[autoplay]').length > 0) {
+  if ( document.querySelectorAll('embed').length > 0) {
     var windowHeight = window.innerHeight,
-        videoEl = document.querySelectorAll('video[autoplay]');
+        videoEl = document.querySelectorAll('embed');
 
     for (var i = 0; i < videoEl.length; i++) {
 
